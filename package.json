@@ -1,0 +1,44 @@
+{
+  "name": "react-flag-list-select",
+  "version": "0.0.1",
+  "description": "Language select component for React Js with SVG flags ",
+  "repository": "unjello/react-flag-list-select",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "scripts": {
+    "lint": "standard | snazzy",
+    "lint-ci": "standard",
+    "test": "jest --env=node --coverage",
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint"
+    }
+  },
+  "keywords": [
+    "i18n",
+    "flags",
+    "language"
+  ],
+  "author": "Andrzej Lichnerowicz <andrzej@lichnerowicz.pl>",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "husky": "^1.0.1",
+    "jest": "^23.1.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.0"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  }
+}
