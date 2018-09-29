@@ -16,7 +16,7 @@ export default {
   external: ['react', 'react-dom'],
   plugins: [
     babel({
-      exclude: 'node_modules/**',
+      exclude: 'node_modules/**'
     }),
     resolve(),
     commonjs()
