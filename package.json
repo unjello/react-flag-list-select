@@ -3,16 +3,19 @@
   "version": "0.0.1",
   "description": "Language select component for React Js with SVG flags ",
   "repository": "unjello/react-flag-list-select",
-  "main": "lib/index.js",
-  "module": "lib/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
-    "build": "babel src -d build",
+    "dist": "babel src -d dist",
     "rollup": "rollup -c",
     "lint": "standard | snazzy",
     "lint-ci": "standard",
-    "test": "jest --env=node --coverage",
+    "test": "jest",
     "preversion": "npm run lint",
     "postversion": "git push && git push --tags"
+  },
+  "jest": {
+    "collectCoverage": true
   },
   "standard": {
     "env": [
@@ -35,13 +38,17 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "husky": "^1.0.1",
-    "jest": "^23.1.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-test-renderer": "^16.5.2",
     "rollup": "^0.66.2",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.8",
@@ -50,6 +57,7 @@
     "standard": "^11.0.0"
   },
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.x",
+    "react-dom": "16.x"
   }
 }

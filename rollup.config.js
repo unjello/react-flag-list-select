@@ -5,8 +5,8 @@ import babel from 'rollup-plugin-babel'
 export default {
   input: 'src/index.js',
   output: {
-    file: 'build/bundle.js',
-    format: 'iife',
+    file: 'dist/index.js',
+    format: 'umd',
     name: 'react_flag_list_select',
     globals: {
       react: 'React',
@@ -17,8 +17,6 @@ export default {
   plugins: [
     babel({
       exclude: 'node_modules/**',
-      plugins: ['external-helpers'],
-      externalHelpers: true
     }),
     resolve(),
     commonjs()
