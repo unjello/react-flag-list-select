@@ -62,5 +62,9 @@
   "peerDependencies": {
     "react": "16.x",
     "react-dom": "16.x"
+  },
+  "dependencies": {
+    "iso-639-1": "^2.0.3",
+    "rfc5646": "^3.0.0"
   }
 }
